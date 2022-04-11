@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viwport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="zara4.css" />
+  </head>
+
+  <body class="First">
+    <!-- JavaScript function clones the template and adds it to the document. -->
+
+    <!-- <template id="products"> 
+  <div class="mainbox" id="mainbox">
+     
+    <img src="images/vito.jpg" alt=""/>
+
+    <h6 id="name"></h6>
+
+    <p id="nro"><b>150euros</b><del>170euros</del></p>
+
+  
+    <div> <id="stars">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+    </div>
+    <button class="button">Buy</button> -->
+
+    <!-- <button onclick="useTemplate();">Buy</button>
+
+  </div>
+</template>  -->
+
+    <div class="mainbox" id="mainbox">
+      <img src="images/vito.jpg" alt="" />
+
+      <h6 id="name">>Glasses #36</h6>
+
+      <p id="price"><b>150euros</b><del>170euros</del></p>
+
+      <div id="stars">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+      </div>
+      <!-- <button class="button">Buy</button> -->
+
+      <button class="button" onclick="useTemplate()">Buy</button>
+    </div>
+
+    <!-- </template> -->
+    <template id="test">
+      <div>
+        <h1 class="test2"></h1>
+        <h2 class="test3"></h2>
+      </div>
+    </template>
+
+    <!-- <button onclick="useTemplate();">Show content</button> -->
+
+    <script>
+      const price = ["150", "95", "159", "149", "139", "125"];
+      const name = [
+        "Glasses #36",
+        "Glasses #56",
+        "Glasses #61",
+        "Glasses #96",
+        "Glasses #105",
+        "Glasses #36",
+      ];
+      // const price = ["150", "95", "159", "149", "139", "125"];
+
+      let text = "";
+      for (let i = 0; i < price.length; i++) {}
+
+      console.log(text);
+      const line = document.querySelector(".First");
+      console.log(line);
+      const template = document.getElementById("test");
+
+      function useTemplate() {
+        const item = template.content.cloneNode(true);
+        console.log(template);
+        item.querySelector(".test2").innerText = "Circle";
+        item.querySelector(".test3").innerText = "Circle2";
+        console.log(item);
+        line.append(item);
+      }
+
+      // function useTemplate() {
+      // var myTemplate = document.getElementById('products');
+      //     normalContent = document.getElementById('mainbox');
+      //     clonedTemplate = myTemplate.content.cloneNode(true);
+      //     normalContent.appendChild(clonedTemplate);
+      //     }
+    </script>
+  </body>
+</html>
